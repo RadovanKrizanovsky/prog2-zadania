@@ -1,0 +1,14 @@
+output: rng.o data.o z4.o
+	gcc rng.o data.o z4.o -o output
+
+rng.o: rng.c rng.h
+	gcc -c rng.c
+
+data.o: data.c data.h
+	gcc -c data.c
+
+z4.o: z4.c
+	gcc -c z4.c
+
+clean:
+	del *.o output
